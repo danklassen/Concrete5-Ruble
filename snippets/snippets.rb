@@ -28,12 +28,12 @@ with_defaults :scope => 'source.php' do
   end
   
   snippet "Theme Path" do |s|
-    s.trigger 'path'
+    s.trigger = 'path'
     s.expansion = '<?php print \$this->getThemePath(); ?>'
   end
   
   snippet 'CSS' do |s|
-    s.trigger 'css'
+    s.trigger = 'css'
     s.expansion = '<link rel="stylesheet" media="screen" type="text/css" href="<?php echo \$this->getStyleSheet(\'${1:\'css_file_name\'}\')?>" />'
   end
 end
