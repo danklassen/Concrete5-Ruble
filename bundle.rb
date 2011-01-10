@@ -10,6 +10,11 @@ END
   bundle.repository = 'git@github.com:danklassen/Concrete5-Ruble.git'
 
   bundle.menu 'Concrete5' do |main_menu|
+    main_menu.menu 'Themes' do |submenu|
+      submenu.command 'CSS'
+      submenu.command 'Editable Area'
+      submenu.command 'Theme Path'
+    end
     main_menu.menu 'Forms' do |submenu|
       submenu.command 'Form Helper Include'
       submenu.command 'Text Field'
