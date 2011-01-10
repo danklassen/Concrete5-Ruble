@@ -76,5 +76,37 @@ class ${3:PageName}Controller extends Controller {
   }
 }
     "
+    
+    snippet 'C5 Model' do |s|
+      s.trigger = 'c5model'
+      s.expansion = '<?php
+defined(\'C5_EXECUTE\') or die(_(\"Access Denied.\"));
+/**
+ * @package ${1:\'Package Name\'}
+ * @author ${2:\'Author Details\'}
+ */
+ 
+class ${3:\'ClassName\'} extends ADOdb_Active_Record {
+  public \$_table = \'$3\';
+  
+  /**
+   * load up an $3 by it\'s id
+   * @param integer \$id id of the $3 item to load
+   * @return $3
+   */
+  public static function _find(\$id) {
+    if(!\$id || (intval(\$id) == 0)) {
+      return false;
+    }
+    \$o = new SalesOrder();
+    \$o->load(\'id=?\', array(\$id));
+    return \$o;
+  }
+  
+  
+}
+'
+    end
+    
   end
 end

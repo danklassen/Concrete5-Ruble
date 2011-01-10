@@ -25,6 +25,7 @@ END
     end
     main_menu.menu 'File Templates' do |submenu|
       submenu.command 'C5 Page Controller'
+      submenu.command 'C5 Model'
     end
   end
 end
