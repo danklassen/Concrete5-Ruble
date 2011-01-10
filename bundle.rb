@@ -14,11 +14,17 @@ END
       submenu.command 'CSS'
       submenu.command 'Editable Area'
       submenu.command 'Theme Path'
+      submenu.command 'C5 Execute'
     end
     main_menu.menu 'Forms' do |submenu|
       submenu.command 'Form Helper Include'
+      submenu.command 'Submit Button'
+      submenu.command 'Hidden Field'
       submenu.command 'Text Field'
       submenu.command 'Texta Area Field'
+    end
+    main_menu.menu 'File Templates' do |submenu|
+      submenu.command 'C5 Page Controller'
     end
   end
 end
